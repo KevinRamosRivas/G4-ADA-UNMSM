@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class DarCambio {
     public static void main(String[] args) {
         int s[]={0,0,0,0,0,0,0,0};
-        double v[]={5,2,1,0.5,0.2,0.1,0.05,0.01};
+        double v[][]={{5,2,1,0.5,0.2,0.1,0.05,0.01},{0,0,7,23,45,16,3,14}};
         double vuelto;
         Scanner entrada = new Scanner(System.in);
         Cambio moneda = new Cambio();
@@ -25,7 +25,7 @@ public class DarCambio {
         if(moneda.Solucion(s, v, vuelto)){
             for (int i=0; i <s.length; i++){
                 if (s[i]>0)
-                    System.out.printf("%d monedas de %.2f soles\n", s[i], v[i]);
+                    System.out.printf("%d monedas de %.2f soles\n", s[i], v[0][i]);
             }
         }
         else
