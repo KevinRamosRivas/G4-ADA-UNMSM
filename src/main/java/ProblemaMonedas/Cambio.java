@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package ProblemaMonedas;
 
 /**
  *
@@ -23,8 +23,10 @@ public class Cambio {
                 if (Factible(s, v, cambio, x)){
                     //inserta moneda
                     s[i]++;
-                    v[1][i]=v[1][i]-1;
-                            
+                    v[1][i]=v[1][i]-1;          
+                }
+                else{
+                    i++;
                 }
 
             }

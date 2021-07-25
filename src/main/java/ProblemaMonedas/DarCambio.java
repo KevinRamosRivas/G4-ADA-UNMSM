@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package ProblemaMonedas;
 
 import java.util.Scanner;
 
@@ -13,8 +13,8 @@ import java.util.Scanner;
  */
 public class DarCambio {
     public static void main(String[] args) {
-        int s[]={0,0,0,0,0,0,0,0};
-        double v[][]={{5,2,1,0.5,0.2,0.1,0.05,0.01},{0,0,7,23,45,16,3,14}};
+        int s[]={0,0,0,0,0,0,0,0,0,0,0,0,0};
+        double v[][]={{200,100,50,20,10,5,2,1,0.5,0.2,0.1,0.05,0.01},{2,2,2,12,3,4,5,7,8,10,2,3,3}};
         double vuelto;
         Scanner entrada = new Scanner(System.in);
         Cambio moneda = new Cambio();
@@ -30,5 +30,8 @@ public class DarCambio {
         }
         else
             System.out.println("No hay solucion");
+//        for (int i=0; i <s.length; i++){
+//            System.out.printf("%d monedas de %.2f soles\n", s[i], v[0][i]);
+//        }
     }
 }    
