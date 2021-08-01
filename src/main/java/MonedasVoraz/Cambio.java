@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DivideVenceras;
+package MonedasVoraz;
 //existe un vector bidimensional v[][] para las monedas(la primera fila es el tipo de 
 //moneda y la segunda fila es la cantidad disponible)
 public class Cambio {
