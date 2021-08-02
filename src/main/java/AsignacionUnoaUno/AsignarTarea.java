@@ -25,7 +25,7 @@ public class AsignarTarea {
             }
         }
         else{
-            System.out.println("No hay solucion");
+            System.out.println("No hay solucion!");
         }
     }
 }
