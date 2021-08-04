@@ -7,7 +7,7 @@ package PotenciacionDyV;
 
 /**
  *
- * @author ramos
+ * @author Adriana Balceda 
  */
  public class PotenciaDyV {
  

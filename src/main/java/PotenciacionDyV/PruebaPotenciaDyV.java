@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ramos
+ * @author Adriana Balceda
  */
 public class PruebaPotenciaDyV extends javax.swing.JFrame {
 
@@ -150,10 +150,10 @@ public class PruebaPotenciaDyV extends javax.swing.JFrame {
             int exponente = Integer.parseInt(jTextField2.getText());
             int potencia = PotenciaDyV.potencia(base,exponente);
             jTextField3.setText(String.valueOf(potencia));
-            JOptionPane.showMessageDialog(null, "Numero de veces que se ejecuta el metodo: "+ PotenciaDyV.vecesEjecutado());
+            JOptionPane.showMessageDialog(null, "Número de veces que se ejecuta el metodo: "+ PotenciaDyV.vecesEjecutado());
         }
         catch(HeadlessException | NumberFormatException e){
-            JOptionPane.showMessageDialog(null,"Escriba valores validos por favor");
+            JOptionPane.showMessageDialog(null,"Escriba valores validos por favor:) ");
         }
     }//GEN-LAST:event_jButtonCalcularActionPerformed
 
