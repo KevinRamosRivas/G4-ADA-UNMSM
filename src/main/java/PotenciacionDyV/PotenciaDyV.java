@@ -14,18 +14,18 @@ package PotenciacionDyV;
  public static int contador = 0;
  public static int potencia(int a,int n){
      contador ++;
-        int r;
+        int re;
         if(n==0){
         return 1;
         }
         else 
             if(n%2!=0){
-            r=potencia(a,n-1);
-            return (a*r);
+            re=potencia(a,n-1);
+            return (a*re);
             }
             else{
-                r=potencia(a,n/2);
-                return (r*r);
+                re=potencia(a,n/2);
+                return (re*re);
             }
 
     }
