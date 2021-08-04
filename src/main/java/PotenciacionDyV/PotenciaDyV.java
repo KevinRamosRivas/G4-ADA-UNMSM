@@ -16,12 +16,15 @@ package PotenciacionDyV;
      contador ++;
         int re;
         if(n==0){
-        return 1;
+            return 1;
+        }
+        else if(n==1){
+            return a;
         }
         else 
             if(n%2!=0){
-            re=potencia(a,n-1);
-            return (a*re);
+                re=potencia(a,n-1);
+                return (a*re);
             }
             else{
                 re=potencia(a,n/2);
