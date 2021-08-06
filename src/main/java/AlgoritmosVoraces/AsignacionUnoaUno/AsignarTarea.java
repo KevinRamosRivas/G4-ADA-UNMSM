@@ -1,5 +1,5 @@
 
-package AsignacionUnoaUno;
+package AlgoritmosVoraces.AsignacionUnoaUno;
 
 public class AsignarTarea {
     public static void main(String[] args) {

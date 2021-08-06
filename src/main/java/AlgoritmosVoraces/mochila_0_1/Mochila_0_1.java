@@ -1,5 +1,5 @@
 
-package mochila_0_1;
+package AlgoritmosVoraces.mochila_0_1;
 
 public class Mochila_0_1 {
 

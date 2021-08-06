@@ -1,5 +1,5 @@
 
-package PotenciacionDyV;
+package AlgoritmosDivideVenceras.PotenciacionDyV;
 
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;

@@ -1,5 +1,5 @@
 
-package mochilafraccional;
+package AlgoritmosVoraces.mochilafraccional;
 
 import java.util.Arrays;
 

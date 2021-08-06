@@ -1,5 +1,5 @@
 
-package mochilafraccional;
+package AlgoritmosVoraces.mochilafraccional;
 
 public class MochilaFraccional {
 
