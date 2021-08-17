@@ -19,6 +19,7 @@ package AlgoritmosDinamicos.Floyd.ImplementacionAB;
  {
                 int n=adyacencia.length;
                 long D[][]=adyacencia;
+                //prueba
  
                 String enlaces[][]=new String [n][n];
                 String[][] aux_enlaces=new String[adyacencia.length][adyacencia.length];
