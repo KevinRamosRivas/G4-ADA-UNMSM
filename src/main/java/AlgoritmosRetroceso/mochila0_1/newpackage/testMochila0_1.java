@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AlgoritmosRetroceso.mochila0_1;
+package AlgoritmosRetroceso.mochila0_1.newpackage;
 
 /**
  *
