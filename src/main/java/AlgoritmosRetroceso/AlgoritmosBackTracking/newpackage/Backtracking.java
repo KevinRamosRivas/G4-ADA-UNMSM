@@ -1,14 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package AlgoritmosRetroceso.AlgoritmosBackTracking.newpackage;
 
-/**
- *
- * @author JAVIER
- */
+import javax.swing.JOptionPane;
+
 public class Backtracking {
+    private int s[];
+    private int v[];
+    private int tact;
+    private int p[];
     
+    public Backtracking(int valores[], int suma){
+        v = new int[valores.length];
+        s = new int[valores.length];
+    }
 }
