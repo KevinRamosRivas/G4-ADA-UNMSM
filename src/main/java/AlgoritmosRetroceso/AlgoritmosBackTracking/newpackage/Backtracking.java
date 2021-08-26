@@ -16,5 +16,6 @@ public class Backtracking {
         v = valores;
         tact = 0;
         p = suma;
+        
     }
 }
