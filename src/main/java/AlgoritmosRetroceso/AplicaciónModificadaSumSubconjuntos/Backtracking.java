@@ -107,7 +107,7 @@ public class Backtracking {
             }
 
 
-            mensaje += "\n\nSubconjunto cuya suma es " + p + "\n{";
+            mensaje += "\n\nSubconjunto cuya suma es  " + p + "\n{";
 
             for(int j=0; j<num_Sol; j++){
                 for(int i=0; i<s.length; i++){
