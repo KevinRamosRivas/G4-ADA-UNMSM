@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Backtracking.Asignación;
+package AlgoritmosRetroceso.AsignacionTareas;
 
-import static Backtracking.Asignación.AsignacionBack.N;
+import static AlgoritmosRetroceso.AsignacionTareas.AsignacionBack.N;
+
+
 
 
 /**
