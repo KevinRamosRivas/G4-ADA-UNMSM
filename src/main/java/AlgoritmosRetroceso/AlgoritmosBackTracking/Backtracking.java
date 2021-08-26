@@ -1,5 +1,5 @@
 
-package AlgoritmosRetroceso.AlgoritmosBackTracking.newpackage;
+package AlgoritmosRetroceso.AlgoritmosBackTracking;
 
 import javax.swing.JOptionPane;
 
