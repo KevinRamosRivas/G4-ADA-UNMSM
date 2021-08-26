@@ -33,7 +33,6 @@ public class mochila_0_1{
     }
     
     public void hallarSubconjunto(){
-        boolean fin = false;
         int nivel = 0;
         for(int i=0;i<s.length;i++){
             s[i]=-1;
@@ -55,7 +54,7 @@ public class mochila_0_1{
                     }
                 }
             }
-        }while(nivel>=0);
+        }while(nivel >= 0);
 
     }
     
