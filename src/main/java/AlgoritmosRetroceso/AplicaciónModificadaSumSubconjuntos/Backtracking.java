@@ -43,9 +43,9 @@ public class Backtracking {
             if(criterio(nivel, p))
                     nivel++;
             else
-                while(!masHermanos(nivel) && (nivel>0))
+                while(!masHermanos(nivel) && (nivel>-1))
                     nivel = retroceder(nivel); 
-        }while(nivel>0);
+        }while(nivel>-1);
     }
     
     public void generar(int nivel){
