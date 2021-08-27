@@ -7,16 +7,14 @@ public class Backtracking {
     
     private int s[];
     private int v[];
-    private int almacenamiento[][];
-    private int num_Sol=0;
     private int tact;
+    private int contador = 0;
     private int p;
     
     public Backtracking(int valores[], int suma){
         
         v = new int[valores.length];
         s = new int[valores.length];
-        almacenamiento = new int[128][7];
         v = valores;
         tact = 0;
         p = suma;
@@ -24,28 +22,46 @@ public class Backtracking {
     }
     
     public void hallarSubconjunto(){
+        String mensaje = "";
         int nivel = 0;
-        boolean fin = false;
         int a=0;
-        
+        int cont = 0;
         //Inicializa arreglo solución s
         for(int i=0; i<s.length;i++)
             s[i] = -1;
+       
+        mensaje = "Valores:\n{";
+
+        for(int i=0; i<v.length; i++){
+            mensaje += v[i];
+            if(i<v.length-1)
+                mensaje += ", ";
+            else
+                mensaje += "}";
+        }
+
+        System.out.println(mensaje);
         
         do{
-            generar(nivel);
-            if(solucion(nivel, p)){
-               // fin = true;
-                almacenar(nivel, a);
-                a++;                
+            //System.out.println(cont);
+            
+            if(s[nivel]==1 && nivel==0){
+                
+            }else{
+                generar(nivel);
             }
-
-            if(criterio(nivel, p))
+            
+            if(solucion(nivel, p)){     
+                mostrarSolucion();
+            }
+            if(criterio(nivel, p)){
                     nivel++;
-            else
-                while(!masHermanos(nivel) && (nivel>-1))
-                    nivel = retroceder(nivel); 
-        }while(nivel>-1);
+            }else{
+                while(!masHermanos(nivel) && nivel>0 && tact!=77){
+                    nivel = retroceder(nivel);             
+                }
+            }
+        }while(tact!=77);
     }
     
     public void generar(int nivel){
@@ -56,7 +72,11 @@ public class Backtracking {
     
     public boolean solucion(int nivel, int p){
         int n = s.length;
-        return(tact==p);
+        if(nivel==n-1 && tact==p){
+            contador++;//contador cuenta el número de soluciones
+        }
+        return(nivel==n-1 && tact==p);
+        
     }
     
     public boolean criterio(int nivel, int p){
@@ -69,64 +89,46 @@ public class Backtracking {
     }
     
     public int retroceder(int nivel){
-        tact -= v[nivel]*s[nivel];
+        if(s[nivel]==1){
+            tact -= v[nivel];
+        }
         s[nivel] = -1;
         nivel--;
         return nivel;
     }
     
-    public void almacenar(int nivel, int a){
-        for(int i=0; i<s.length; i++){ 
-                almacenamiento[a][i] = s[i];
-        }
-        num_Sol++;
-    }
     public void mostrarSolucion(){
+        
         String mensaje = "";
-        
-        mensaje = "Valores:\n{";
-        
-        for(int i=0; i<v.length; i++){
-            mensaje += v[i];
-            if(i<v.length-1)
+
+            mensaje += "\n\nSolución Backtracking:\n{";
+
+        for(int i=0; i<s.length; i++){
+            mensaje += s[i];
+            if(i<s.length-1)
                 mensaje += ", ";
             else
                 mensaje += "}";
         }
-        
-        if(num_Sol!=0){
-            mensaje += "\n\nSolución Backtracking:\n{";
-            for(int j=0; j<num_Sol; j++){
-                for(int i=0; i<s.length; i++){
-                    mensaje += almacenamiento[j][i];
-                    if(i<s.length-1)
-                        mensaje += ", ";
-                    else
-                        mensaje += "}\n";
-                }
+        mensaje += "\n\nSubconjunto cuya suma es " + p + "\n{";
+
+        for(int i=0; i<s.length; i++){
+            if(s[i]==1){
+                mensaje += v[i];
+                if(i<s.length-1)
+                    mensaje +=", ";
+                else
+                    mensaje +="}\n";
             }
-
-
-            mensaje += "\n\nSubconjunto cuya suma es " + p + "\n{";
-
-            for(int j=0; j<num_Sol; j++){
-                for(int i=0; i<s.length; i++){
-                    if(almacenamiento[j][i]==1){
-                        mensaje += v[i];
-                        if(i<s.length-1)
-                            mensaje +=", ";
-                        else
-                            mensaje +="}\n ";
-                    }
-                }
-            }
-            JOptionPane.showMessageDialog(null, mensaje, "Algoritmos de retroceso"
-                    + "(Backtracking)", JOptionPane.INFORMATION_MESSAGE);    
-        }else{
-            mensaje += "\n\nNo hay solución";
-            JOptionPane.showMessageDialog(null, mensaje, "Algoritmos de retroceso"
-                    + "(Backtracking)", JOptionPane.INFORMATION_MESSAGE);  
         }
-        
+        System.out.println(mensaje);
+            
+    }
+    
+    public void existeSol(){
+        if(contador!=0){//si contador es igual 0 entonces no hay solución
+        }else{
+            System.out.println("No hay solución");
+        }
     }
 }

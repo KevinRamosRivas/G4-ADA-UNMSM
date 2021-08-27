@@ -9,6 +9,6 @@ public class PruebaBacktracking {
         Backtracking sumaDada = new Backtracking(valores, suma);
         
         sumaDada.hallarSubconjunto();
-        sumaDada.mostrarSolucion();
+        sumaDada.existeSol();
     }
 }
